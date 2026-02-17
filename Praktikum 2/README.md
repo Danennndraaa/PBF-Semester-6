@@ -15,27 +15,27 @@ Prodi: D4 Teknik Informatika
 ## Langkah Kerja Praktikum
 
 ### Langkah 1 – Pengecekan Lingkungan
-![images](Docs/01.png)
+![images](docs/01.png)
 
 ### Langkah 2 – Membuat Project Next.js
-![images](Docs/02.png)
-![images](Docs/03.png)
+![images](docs/02.png)
+![images](docs/03.png)
 
 ### Langkah 3 – Menjalankan Server Development
-![images](Docs/04.png)
-![images](Docs/05.png)
+![images](docs/04.png)
+![images](docs/05.png)
 
 ### Langkah 5 – Modifikasi Halaman Utama
-![images](Docs/06.png)
-![images](Docs/07.png)
+![images](docs/06.png)
+![images](docs/07.png)
 
 ### Langkah 6 – Modifikasi API
-![images](Docs/08.png)
-![images](Docs/09.png)
+![images](docs/08.png)
+![images](docs/09.png)
 
 ### Langkah 7 – Modifikasi Background
-![images](Docs/10.png)
-![images](Docs/11.png)
+![images](docs/10.png)
+![images](docs/11.png)
 
 
 ## Tugas Praktikum
@@ -51,14 +51,14 @@ o NIM
 
 o Program Studi
 
-![images](Docs/12.png)
+![images](docs/12.png)
 
 ### Tugas 2 (Pengayaan)
 • Tambahkan minimal 1 link navigasi dari halaman utama ke halaman about.
 
-![images](Docs/13.png)
-![images](Docs/14.png)
-![images](Docs/15.png)
+![images](docs/13.png)
+![images](docs/14.png)
+![images](docs/15.png)
 
 ## Pertanyaan Refleksi
 
