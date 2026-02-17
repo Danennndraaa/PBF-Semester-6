@@ -1,38 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Setup Project Next.js menggunakan Pages Router
 
-## Getting Started
+Pemrograman Berbasis Framework
 
-First, run the development server:
+Nama: Danendra Adhipramana
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Nim: 244107023011
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Absen: 08
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Prodi: D4 Teknik Informatika
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Documentations
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Langkah Kerja Praktikum
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Langkah 1 – Pengecekan Lingkungan
+![images](Docs/01.png)
 
-## Learn More
+### Langkah 2 – Membuat Project Next.js
+![images](Docs/02.png)
+![images](Docs/03.png)
 
-To learn more about Next.js, take a look at the following resources:
+### Langkah 3 – Menjalankan Server Development
+![images](Docs/04.png)
+![images](Docs/05.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Langkah 5 – Modifikasi Halaman Utama
+![images](Docs/06.png)
+![images](Docs/07.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Langkah 6 – Modifikasi API
+![images](Docs/08.png)
+![images](Docs/09.png)
 
-## Deploy on Vercel
+### Langkah 7 – Modifikasi Background
+![images](Docs/10.png)
+![images](Docs/11.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Tugas Praktikum
+
+### Tugas 1 (Wajib)
+• Buat halaman baru about.js di folder pages.
+
+• Tampilkan:
+
+o Nama Mahasiswa
+
+o NIM
+
+o Program Studi
+
+![images](Docs/12.png)
+
+### Tugas 2 (Pengayaan)
+• Tambahkan minimal 1 link navigasi dari halaman utama ke halaman about.
+
+![images](Docs/13.png)
+![images](Docs/14.png)
+![images](Docs/15.png)
+
+## Pertanyaan Refleksi
+
+1. Mengapa Pages Router disebut sebagai routing berbasis file? 
+
+> Karena routing ditentukan secara otomatis oleh struktur folder dan file di dalam direktori pages/. Setiap file JavaScript/TypeScript yang ditambahkan ke folder tersebut akan otomatis menjadi alamat URL (route) aplikasi.
+
+
+2. Apa perbedaan Next.js dengan React standar (CRA)? 
+
+> Next.js adalah framework yang menyediakan fitur siap pakai seperti routing berbasis file, optimasi performa otomatis, dan dukungan rendering modern (SSR/SSG). Sedangkan React standar (CRA) lebih fokus pada library UI dan biasanya hanya mendukung Client-Side Rendering (CSR) secara bawaan.
+
+
+3. Apa fungsi perintah npm run dev? 
+
+> Perintah ini berfungsi untuk menjalankan aplikasi Next.js pada server pengembangan (development server). Ini memungkinkan fitur seperti hot reloading, di mana perubahan kode akan langsung terlihat di browser tanpa perlu me-restart server secara manual.
+
+
+
+4. Apa perbedaan npm run dev dan npm run build? 
+
+
+> npm run dev: Digunakan saat proses koding (pengembangan). Server berjalan dengan fitur debugging dan tidak melakukan optimasi penuh agar proses kompilasi cepat.
+
+
+>npm run build: Digunakan untuk membuat versi produksi dari aplikasi. Perintah ini mengoptimalkan kode, mengecilkan ukuran file, dan menyiapkan aplikasi agar siap di-deploy ke server asli.
++1
