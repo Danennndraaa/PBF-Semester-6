@@ -16,35 +16,35 @@ Prodi: D4 Teknik Informatika
 
 ### Langkah 1 – Pengecekan Lingkungan
 hasil pengecekan lingkungan:
-![images](assets\docs_p2\01.png)
+![images](assets/docs_p2/01.png)
 
 ### Langkah 2 – Membuat Project Next.js
 hasil membuat project:
-![images](assets\docs_p2\02.png)
-![images](assets\docs_p2\03.png)
+![images](assets/docs_p2/02.png)
+![images](assets/docs_p2/03.png)
 
 ### Langkah 3 – Menjalankan Server Development
 hasil menjalankan server development:
-![images](assets\docs_p2\04.png)
-![images](assets\docs_p2\05.png)
+![images](assets/docs_p2/04.png)
+![images](assets/docs_p2/05.png)
 
 ### Langkah 5 – Modifikasi Halaman Utama
 kode:
-![images](assets\docs_p2\06.png)
+![images](assets/docs_p2/06.png)
 hasil modifikasi halaman utama:
-![images](assets\docs_p2\07.png)
+![images](assets/docs_p2/07.png)
 
 ### Langkah 6 – Modifikasi API
 kode:
-![images](assets\docs_p2\08.png)
+![images](assets/docs_p2/08.png)
 hasil modifikasi API:
-![images](assets\docs_p2\09.png)
+![images](assets/docs_p2/09.png)
 
 ### Langkah 7 – Modifikasi Background
 kode:
-![images](assets\docs_p2\10.png)
+![images](assets/docs_p2/10.png)
 hasil modifikasi background:
-![images](assets\docs_p2\11.png)
+![images](assets/docs_p2/11.png)
 
 
 ## Tugas Praktikum
@@ -61,17 +61,17 @@ o NIM
 o Program Studi
 
 hasil:
-![images](assets\docs_p2\12.png)
+![images](assets/docs_p2/12.png)
 
 ### Tugas 2 (Pengayaan)
 • Tambahkan minimal 1 link navigasi dari halaman utama ke halaman about.
 
 kode halaman utama:
-![images](assets\docs_p2\13.png)
+![images](assets/docs_p2/13.png)
 hasil modifikasi halaman utama dengan routing:
-![images](assets\docs_p2\14.png)
+![images](assets/docs_p2/14.png)
 jika diklik ke halaman utama maka akan menampilkan halaman about:
-![images](assets\docs_p2\15.png)
+![images](assets/docs_p2/15.png)
 
 ## Pertanyaan Refleksi
 
