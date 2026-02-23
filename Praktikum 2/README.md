@@ -16,34 +16,47 @@ Prodi: D4 Teknik Informatika
 
 ### Langkah 1 – Pengecekan Lingkungan
 hasil pengecekan lingkungan:
+
 ![images](docs/01.png)
 
 ### Langkah 2 – Membuat Project Next.js
 hasil membuat project:
+
 ![images](docs/02.png)
 ![images](docs/03.png)
 
 ### Langkah 3 – Menjalankan Server Development
 hasil menjalankan server development:
+
 ![images](docs/04.png)
 ![images](docs/05.png)
 
 ### Langkah 5 – Modifikasi Halaman Utama
 kode:
+
 ![images](docs/06.png)
+
 hasil modifikasi halaman utama:
+
 ![images](docs/07.png)
 
 ### Langkah 6 – Modifikasi API
 kode:
+
 ![images](docs/08.png)
+
 hasil modifikasi API:
+
 ![images](docs/09.png)
 
 ### Langkah 7 – Modifikasi Background
 kode:
+
+
 ![images](docs/10.png)
+
 hasil modifikasi background:
+
 ![images](docs/11.png)
 
 
@@ -61,16 +74,22 @@ o NIM
 o Program Studi
 
 hasil:
+
 ![images](docs/12.png)
 
 ### Tugas 2 (Pengayaan)
 • Tambahkan minimal 1 link navigasi dari halaman utama ke halaman about.
 
 kode halaman utama:
+
 ![images](docs/13.png)
+
 hasil modifikasi halaman utama dengan routing:
+
 ![images](docs/14.png)
+
 jika diklik ke halaman utama maka akan menampilkan halaman about:
+
 ![images](docs/15.png)
 
 ## Pertanyaan Refleksi
