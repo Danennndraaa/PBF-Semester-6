@@ -3,19 +3,29 @@ import { useRouter } from "next/router";
 
 const halamanLogin = () => {
     const { push } = useRouter();
-    const handlerLogin = () => {
-        push("/produk");
-    }
-    return (
-        <div>
-            <h1>Halaman Login</h1>
-            <button onClick={handlerLogin}>Login</button><br />
-            <button onClick={() => push("/produk")}>Login</button><br />
-            <button onClick={() => handlerLogin()}>Login</button><br />
-            <br /><p>Belum Punya akun?</p>
-            <Link href="/auth/register">Ke Halaman Register</Link>
-        </div>
-    )
+
+  const handlerLogin = () => {
+    // Simulasi proses login di sini...
+    // Setelah selesai, pindah ke halaman produk secara imperatif
+    push('/produk');
+  };
+
+  return (
+    <div style={{ padding: '20px' }}>
+      <h1>Halaman Login</h1>
+      
+      {/* Navigasi imperatif memanggil fungsi */}
+      <button onClick={() => handlerLogin()} style={{ padding: '10px', marginBottom: '10px' }}>
+        Login
+      </button> 
+      <br />
+
+      {/* Navigasi deklaratif */}
+      <Link href="/auth/register" style={{ color: 'blue' }}>
+        Belum punya akun? Ke Halaman Register
+      </Link>
+    </div>
+  );
 }
 
 export default halamanLogin;
