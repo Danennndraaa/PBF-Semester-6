@@ -10,9 +10,9 @@ const Appshell = (props:AppshellProps) => {
     <main>
       <Navbar />
       {children}
-      <div>
-        footer
-      </div>
+      <footer style={{ backgroundColor: '#333', color: 'white', padding: '15px', textAlign: 'center' }}>
+        <p>&copy; Danendra - 244107023011 - 2026 - Pemrograman Berbasis Framework</p>
+      </footer>
     </main>
   );
 };
