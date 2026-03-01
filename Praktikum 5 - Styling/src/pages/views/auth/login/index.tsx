@@ -22,9 +22,8 @@ const halamanLogin = () => {
       <br />
 
       {/* Navigasi deklaratif */}
-      <Link href="/auth/register" style={{ color: 'blue' }}>
-        Belum punya akun? Ke Halaman Register
-      </Link>
+      <h1 style={{ color: "red",borderRadius: "10px",padding: "10px",}}>Belum punya akun?</h1>
+      <Link href="/auth/register">Ke Halaman Register</Link>
     </div>
   );
 }
