@@ -6,39 +6,56 @@ type ProductType = {
   name: string;
   price: number;
   size: string;
+  category: string;
 };
 
-const kategori = () => {
+const Kategori = () => {
+  // Menambahkan tipe data ke useState agar TypeScript lebih akurat
+  const [products, setProduct] = useState<ProductType[]>([]);
 
-  const [products, setProduct] = useState([]);
-
-  useEffect(() => {
+  // 1. Ekstrak logika fetch ke dalam fungsi terpisah
+  const fetchData = () => {
     fetch("/api/produk")
       .then((response) => response.json())
       .then((responsedata) => {
-        //console.log(responsedata.data);
+        // console.log(responsedata.data);
         setProduct(responsedata.data);
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
       });
+  };
+
+  // 2. Panggil fetchData saat komponen pertama kali di-mount
+  useEffect(() => {
+    fetchData();
   }, []);
 
   return (
     <div>
       <h1>Daftar Produk</h1>
+      
+      {/* 3. Tambahkan tombol Refresh yang memanggil fungsi fetchData */}
+      <button 
+        onClick={fetchData} 
+        style={{ padding: "8px 16px", marginBottom: "20px", cursor: "pointer" }}
+      >
+        Refresh Data
+      </button>
+
       {products.map((product: ProductType) => (
-        <div key={product.id}>
+        <div key={product.id} style={{ borderBottom: "1px solid #ccc", marginBottom: "10px" }}>
           <h2>{product.name}</h2>
           <p>Harga: {product.price}</p>
           <p>Ukuran: {product.size}</p>
+          <p>Kategori: {product.category}</p>
         </div>
       ))}
     </div>
   );
 };
 
-export default kategori;
+export default Kategori;
 
 
 
