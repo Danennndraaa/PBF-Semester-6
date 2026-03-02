@@ -10,13 +10,16 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <div>
+      <head>
+        <title>Praktikum Next.js Custom Error and Document</title>
+      </head>
       {/* <Navbar /> */}
       <h1>Praktikum Next.js Custom Error and Document</h1>
       <p>Mahasiswa D4 Pengembangan Web</p>
       <br />
-      <Link href="/about" style={{ color: 'blue', textDecoration: 'underline' }}>
+      {/* <Link href="/about" style={{ color: 'blue', textDecoration: 'underline' }}>
         Ke Halaman About
-      </Link>
+      </Link> */}
     </div>
     
     // <>
