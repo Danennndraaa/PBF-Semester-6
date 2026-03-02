@@ -1,13 +1,45 @@
+/* src/styles/404.module.scss */
 .error {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f8f9fa; /* Custom warna background */
+  font-family: 'Inter', sans-serif; /* Custom font */
+  text-align: center;
+  padding: 20px;
 
-    
-&__image{
-    width: 300px;
-}
+  &_image {
+    width: 350px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &_title {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 10px;
+  }
+
+  &_desc {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+  }
+
+  &_button {
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
 }
