@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <div>
       <head>
-        <title>Praktikum Next.js Custom Error and Document</title>
+        <title>Praktikum Next.js API Routes</title>
       </head>
       {/* <Navbar /> */}
-      <h1>Praktikum Next.js Custom Error and Document</h1>
+      <h1>Praktikum Next.js  API Routes pada Next.js dan Integrasi Firebase (Fullstack Next.js)</h1>
       <p>Mahasiswa D4 Pengembangan Web</p>
       <br />
       {/* <Link href="/about" style={{ color: 'blue', textDecoration: 'underline' }}>
