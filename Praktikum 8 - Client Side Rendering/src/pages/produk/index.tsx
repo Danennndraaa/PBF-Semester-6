@@ -4,16 +4,16 @@ import TampilanProduk from "../views/product";
 import useSWR from "swr";
 import fetcher from "../utils/swr/fetcher";
 
-// const fetcher = (url: string) => fetch(url).then((res) => res.json());
-
 const Kategori = () => {
-  const [products, setProduct] = useState([]);
-
   const { data, error, isLoading } = useSWR("/api/produk", fetcher);
 
   return (
     <div>
-      <TampilanProduk products={isLoading ? [] : data.data} /> 
+      <TampilanProduk 
+        products={data?.data || []} 
+        isLoading={isLoading} 
+        error={error} 
+      /> 
     </div>
   );
 };
