@@ -1,17 +1,10 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
-type ProductType = {
-  id: string;
-  name: string;
-  price: number;
-  size: string;
-  category: string;
-};
+import TampilanProduk from "../views/product";
 
 const Kategori = () => {
   // Menambahkan tipe data ke useState agar TypeScript lebih akurat
-  const [products, setProduct] = useState<ProductType[]>([]);
+  const [products, setProduct] = useState([]);
 
   // 1. Ekstrak logika fetch ke dalam fungsi terpisah
   const fetchData = () => {
@@ -33,24 +26,7 @@ const Kategori = () => {
 
   return (
     <div>
-      <h1>Daftar Produk</h1>
-      
-      {/* 3. Tambahkan tombol Refresh yang memanggil fungsi fetchData */}
-      <button 
-        onClick={fetchData} 
-        style={{ padding: "8px 16px", marginBottom: "20px", cursor: "pointer" }}
-      >
-        Refresh Data
-      </button>
-
-      {products.map((product: ProductType) => (
-        <div key={product.id} style={{ borderBottom: "1px solid #ccc", marginBottom: "10px" }}>
-          <h2>{product.name}</h2>
-          <p>Harga: {product.price}</p>
-          <p>Ukuran: {product.size}</p>
-          <p>Kategori: {product.category}</p>
-        </div>
-      ))}
+      <TampilanProduk products={products} />
     </div>
   );
 };
