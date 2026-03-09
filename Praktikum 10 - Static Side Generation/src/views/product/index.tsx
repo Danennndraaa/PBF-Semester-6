@@ -1,4 +1,4 @@
-import styles from "../../produk/produk.module.scss";
+import styles from "../../pages/produk/produk.module.scss";
 
 type ProductType = {
   id: string;
@@ -10,8 +10,8 @@ type ProductType = {
 
 type TampilanProdukProps = {
   products: ProductType[];
-  isLoading: boolean;
-  error: any;
+  isLoading?: boolean;
+  error?: any;
 };
 
 const TampilanProduk = ({ products, isLoading, error }: TampilanProdukProps) => {
