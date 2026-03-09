@@ -45,7 +45,7 @@ const TampilanProduk = ({ products, isLoading, error }: TampilanProdukProps) => 
               </p>
               <p className={styles.produk__content__item__price}>
                 {/* Menambahkan locale agar format rupiahnya benar */}
-                Rp {product.price.toLocaleString("id-ID")} 
+                Rp {product.price} 
               </p>
             </div>
           ))
