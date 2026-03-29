@@ -14,7 +14,7 @@ export default function Home() {
         <title>Praktikum Next.js API Routes</title>
       </head>
       {/* <Navbar /> */}
-      <h1>Praktikum Next.js  API Routes pada Next.js dan Integrasi Firebase (Fullstack Next.js)</h1>
+      <h1>Praktikum Next.js Dynamic Routing & Static Generation</h1>
       <p>Mahasiswa D4 Pengembangan Web</p>
       <br />
       {/* <Link href="/about" style={{ color: 'blue', textDecoration: 'underline' }}>

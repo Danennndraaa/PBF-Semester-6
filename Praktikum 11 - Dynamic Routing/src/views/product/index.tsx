@@ -1,4 +1,5 @@
 import styles from "../../pages/produk/produk.module.scss";
+import Link from "next/link";
 
 type ProductType = {
   id: string;
@@ -33,7 +34,8 @@ const TampilanProduk = ({ products, isLoading, error }: TampilanProdukProps) => 
           ))
         ) : products.length > 0 ? (
           products.map((product: ProductType) => (
-            <div key={product.id} className={styles.produk__content__item}>
+          <Link href ={`/produk/${product.id}`} key={product.id} className={styles.produk__content__item}>
+           <div key={product.id} className={styles.produk__content__item}>
               <div className={styles.produk__content__item__image}>
                 <img src={product.image} alt={product.name} width={200} />
               </div>
@@ -48,6 +50,7 @@ const TampilanProduk = ({ products, isLoading, error }: TampilanProdukProps) => 
                 Rp {product.price} 
               </p>
             </div>
+          </Link>
           ))
         ) : (
           <div className={styles.produk__empty}>Tidak ada produk yang tersedia.</div>
