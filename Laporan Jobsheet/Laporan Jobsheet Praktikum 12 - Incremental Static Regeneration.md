@@ -1,4 +1,4 @@
-# Dynamic Incremental Static Regeneration (ISR)
+# Incremental Static Regeneration (ISR)
 
 Pemrograman Berbasis Framework
 
