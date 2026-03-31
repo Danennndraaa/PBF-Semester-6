@@ -1,23 +1,12 @@
-import { getToken } from "next-auth/jwt";
-import { NextFetchEvent, NextMiddleware, NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import withAuth from "./Middleware/withAuth";
 
-export default function withAuth(
-  middleware: NextMiddleware,
-  requireAuth: string[] = [],
-) {
-  return async (req: NextRequest, next: NextFetchEvent) => {
-    const pathname = req.nextUrl.pathname;
-
-    if (requireAuth.includes(pathname)) {
-      const token = await getToken({
-        req,
-        secret: process.env.NEXTAUTH_SECRET,
-      });
-      if (!token) {
-        const loginUrl = new URL("/login", req.url);
-        return NextResponse.redirect(loginUrl);
-      }
-    }
-    return middleware(req, next);
-  }
+export function MainMiddleware(request: NextRequest) {
+   const res = NextResponse.next();
+   return res;
 }
+
+// Middleware ini akan memeriksa apakah pengguna sudah login sebelum mengakses halaman profile
+export default withAuth(MainMiddleware, ["/profile"]);
+

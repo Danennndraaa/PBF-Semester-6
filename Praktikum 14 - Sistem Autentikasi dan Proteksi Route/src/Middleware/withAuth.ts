@@ -14,7 +14,7 @@ export default function withAuth(
         secret: process.env.NEXTAUTH_SECRET,
       });
       if (!token) {
-        const loginUrl = new URL("/login", req.url);
+        const loginUrl = new URL("/api/auth/signin", req.url);
         return NextResponse.redirect(loginUrl);
       }
     }
