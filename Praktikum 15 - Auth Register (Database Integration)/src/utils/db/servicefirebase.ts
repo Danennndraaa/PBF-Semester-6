@@ -10,6 +10,7 @@ import {
     where, 
 } from "firebase/firestore";
 import app from "./firebase";
+import bcrypt from "bcrypt";
 
 const db = getFirestore(app);
 
@@ -33,6 +34,7 @@ export async function signUp(
     email: string;
     fullname: string;
     password: string;
+    role?: string;
   },
   callback: Function,
 ) {
@@ -46,17 +48,28 @@ export async function signUp(
     ...doc.data(),
   }));
 
-  // Jika data.length === 0, berarti email belum dipakai -> Boleh daftar
+  // Jika data.length === 0, berarti email belum dipakai -> BOLEH DAFTAR
   if (data.length === 0) {
-    // Jangan lupa hilangkan comment pada addDoc agar data tersimpan!
-    await addDoc(collection(db, "users"), userData);
-    
-    callback({
-      status: "success",
-      message: "User registered successfully",
-    });
+    // 1. Hash password dan set role di sini (sebelum disimpan)
+    userData.password = await bcrypt.hash(userData.password, 10);
+    userData.role = "user";
+
+    // 2. Simpan ke database
+    await addDoc(collection(db, "users"), userData)
+      .then(() => {
+        callback({
+          status: "success",
+          message: "User registered successfully",
+        });
+      })
+      .catch((error) => {
+        callback({
+          status: "error",
+          message: error.message,
+        });
+      });
   } else {
-    // Jika email sudah ada di database -> Error
+    // Jika data.length > 0, email SUDAH DIPAKAI -> ERROR! Jangan simpan data.
     callback({
       status: "error",
       message: "User already exists",
