@@ -56,7 +56,7 @@ const TampilanRegister = () => {
 
   return (
     <div className={styles.register}>
-      \\ Tampilkan pesan error di UI.
+      {/* Tampilkan pesan error di UI. */}
           {error && <p className={styles.register__error}>{error}</p>}
       <h1 className={styles.register__title}>Halaman Register</h1>
         <div className={styles.register__form}>
