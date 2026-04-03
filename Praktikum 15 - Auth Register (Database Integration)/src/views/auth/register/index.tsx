@@ -17,6 +17,21 @@ const TampilanRegister = () => {
     const email = formData.get("email") as string;
     const fullname = formData.get("Fullname") as string;
     const password = formData.get("Password") as string;
+
+    // --- MULAI VALIDASI ---
+    if (!email) {
+      setError("Email wajib diisi!");
+      setIsLoading(false);
+      return; // Hentikan fungsi jika gagal validasi
+    }
+
+    if (password.length < 6) {
+      setError("Password minimal 6 karakter!");
+      setIsLoading(false);
+      return;
+    }
+    // --- AKHIR VALIDASI ---
+
     const response = await fetch("/api/register", {
       method: "POST",
       headers: {
@@ -41,6 +56,7 @@ const TampilanRegister = () => {
 
   return (
     <div className={styles.register}>
+      \\ Tampilkan pesan error di UI.
           {error && <p className={styles.register__error}>{error}</p>}
       <h1 className={styles.register__title}>Halaman Register</h1>
         <div className={styles.register__form}>
