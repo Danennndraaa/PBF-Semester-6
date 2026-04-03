@@ -39,6 +39,7 @@ const TampilanLogin = () => {
   };
 
   return (
+    <> 
     <div className={styles.login}>
       {/* Tampilkan pesan error di UI. */}
           {error && <p className={styles.login__error}>{error}</p>}
@@ -86,6 +87,7 @@ const TampilanLogin = () => {
         </p>
       </div>
     </div>
+    </>  
   );
 };
 
