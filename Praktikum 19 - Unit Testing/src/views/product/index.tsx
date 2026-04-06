@@ -33,26 +33,25 @@ const TampilanProduk = ({ products, isLoading, error }: TampilanProdukProps) => 
               <div className={styles.produk__content__skeleton__price}></div>
             </div>
           ))
-        ) : products.length > 0 ? (
-          products.map((product: ProductType) => (
-          <Link href ={`/produk/${product.id}`} key={product.id} className={styles.produk__content__item}>
-           <div key={product.id} className={styles.produk__content__item}>
-              <div className={styles.produk__content__item__image}>
-                <Image src={product.image} alt={product.name} width={200} height={200} />
-              </div>
-              <h4 className={styles.produk__content__item__name}>
-                {product.name}
-              </h4>
-              <p className={styles.produk__content__item__category}>
-                {product.category}
-              </p>
-              <p className={styles.produk__content__item__price}>
-                {/* Menambahkan locale agar format rupiahnya benar */}
-                Rp {product.price} 
-              </p>
-            </div>
-          </Link>
-          ))
+        ) : products?.length > 0 ? (
+          <>
+            {products?.map((product: ProductType) => (
+              <Link href={`/produk/${product.id}`} key={product.id} className={styles.produk__content__item}>
+                <div className={styles.produk__content__item__image}>
+                  <Image src={product.image} alt={product.name} width={200} height={200} />
+                </div>
+                <h4 className={styles.produk__content__item__name}>
+                  {product.name}
+                </h4>
+                <p className={styles.produk__content__item__category}>
+                  {product.category}
+                </p>
+                <p className={styles.produk__content__item__price}>
+                  Rp {product.price} 
+                </p>
+              </Link>
+            ))}
+          </>
         ) : (
           <div className={styles.produk__empty}>Tidak ada produk yang tersedia.</div>
         )}
