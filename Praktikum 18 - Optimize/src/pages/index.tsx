@@ -1,18 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Roboto } from "next/font/google";
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link';
 import Navbar from '@/components/layouts/navbar';
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
-    <div>
-      <head>
+    <div className={roboto.className}>
+      <Head>
         <title>Praktikum Next.js Optimasi Performa Aplikasi Menggunakan Fitur Next.js</title>
-      </head>
+      </Head>
       {/* <Navbar /> */}
       <h1>Praktikum Next.js Optimasi Performa Aplikasi Menggunakan Fitur Next.js</h1>
       <p>Mahasiswa D4 Pengembangan Web</p>
@@ -21,7 +24,9 @@ export default function Home() {
         Ke Halaman About
       </Link> */}
     </div>
-    
+  
+  )
+}
     // <>
     //   <Head>
     //     <title>Create Next App</title>
@@ -125,5 +130,3 @@ export default function Home() {
     //     </div>
     //   </main>
     // </>
-  )
-}
