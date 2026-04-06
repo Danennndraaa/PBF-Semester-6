@@ -1,10 +1,7 @@
 import { useRouter } from "next/router";
 import { Roboto } from "next/font/google";
-import Script from "next/script"; // Tugas 3
-import dynamic from "next/dynamic"; // Tugas 4
-
-// Tugas 4: Dynamic import pada komponen Navbar
-const Navbar = dynamic(() => import("../navbar"));
+import Script from "next/script";
+import Navbar from "@/components/layouts/navbar";
 
 const disableNavbar = ['/auth/login', '/auth/register', '/404'];
 
@@ -23,7 +20,6 @@ const Appshell = (props:AppshellProps) => {
     const { pathname } = useRouter();
   return (
     <main className={roboto.className}>
-      {/* Tugas 3: Script Google Analytics */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=G-1234567890`}
         strategy="afterInteractive"
