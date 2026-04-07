@@ -10,7 +10,7 @@ jest.mock('next/server', () => ({
 // 2. Mock withAuth yang sangat sederhana
 jest.mock('../../Middleware/withAuth', () => jest.fn((mw, paths) => ({ mw, paths })));
 
-describe('Main Middleware', () => {
+describe('Proxy Middleware', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -18,26 +18,26 @@ describe('Main Middleware', () => {
   it('harus mengeksekusi seluruh statement di level module tanpa sisa', () => {
     // KUNCI UTAMA: Mengisolasi modul agar file dievaluasi ulang sepenuhnya di dalam test
     jest.isolateModules(() => {
-      // Import secara dinamis (require) di dalam isolateModules
-      const middlewareModule = require('../../middleware');
+      // PERBAIKAN: Ubah import dinamis (require) ke file proxy yang baru
+      const proxyModule = require('../../proxy');
       const withAuthMock = require('../../Middleware/withAuth');
 
       // 1. Test eksekusi MainMiddleware
       const req = {} as NextRequest;
-      const res = middlewareModule.MainMiddleware(req);
+      const res = proxyModule.MainMiddleware(req);
       
       expect(NextResponse.next).toHaveBeenCalled();
       expect(res).toBe('mocked-next-response');
 
       // 2. Test eksekusi statement export default
       expect(withAuthMock).toHaveBeenCalledWith(
-        middlewareModule.MainMiddleware, 
+        proxyModule.MainMiddleware, 
         ["/profile", "/admin", "/editor"]
       );
       
       // 3. Pastikan hasil dari export default benar
-      expect(middlewareModule.default).toEqual({
-        mw: middlewareModule.MainMiddleware,
+      expect(proxyModule.default).toEqual({
+        mw: proxyModule.MainMiddleware,
         paths: ["/profile", "/admin", "/editor"]
       });
     });

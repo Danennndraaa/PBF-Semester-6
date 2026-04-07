@@ -1,4 +1,4 @@
-@import "../../../styles/color.scss";
+@use "../../../styles/color.scss" as *;
 
 .login {
   min-height: 100vh;
