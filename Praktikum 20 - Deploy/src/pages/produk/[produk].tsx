@@ -31,7 +31,7 @@ export default HalamanProduk;
 // digunakan server-side rendering
 
 export async function getServerSideProps({ params }: { params: { produk: string } }) {
-  const res = await fetch(`http://localhost:3000/api/products/${params?.produk}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${params?.produk}`);
   const responce = await res.json();
   return {
     props: {
