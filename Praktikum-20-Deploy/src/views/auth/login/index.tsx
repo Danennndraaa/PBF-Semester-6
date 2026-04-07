@@ -77,18 +77,24 @@ const TampilanLogin = () => {
               className={styles.login__form__item__input}
             />
           </div>
-          <button type="submit" className={styles.login__form__item__button} disabled={isLoading}>
-            {isLoading ? "Loading..." : "login"}
-          </button>{" "}
-          <br /> <br />
           <button
-            onClick={() => signIn("google", { callbackUrl, redirect: false })}
+            type="submit"
             className={styles.login__form__item__button}
             disabled={isLoading}
           >
-            {isLoading ? "Loading..." : "sign in with google"}
-          </button>{" "}
-          <br /> <br />   
+            {isLoading ? "Loading..." : "Login"}
+          </button>
+          <br />
+          <br />
+          <button
+            type="button"
+            onClick={() => signIn("google", { callbackUrl, redirect: false })}
+            className={styles.login__form__item__button}
+          >
+            Sign in with Google
+          </button>
+          <br /> 
+          <br />   
           <button
             type="button"
             onClick={() => signIn("github", { callbackUrl, redirect: false })}
@@ -100,7 +106,7 @@ const TampilanLogin = () => {
         </form>
         <br />
         <p className={styles.login__form__item_text}>
-          tidak punya {"'"} akun? <Link href="/auth/register">Ke Halaman Register</Link>
+          tidak punya akun? <Link href="/auth/register">Ke Halaman Register</Link>
         </p>
       </div>
     </div>
