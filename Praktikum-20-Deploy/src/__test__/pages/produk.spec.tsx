@@ -48,7 +48,7 @@ describe('Halaman Produk (Dynamic SSR)', () => {
     const result = await getServerSideProps(context);
 
     // Memastikan fetch dipanggil dengan gabungan ENV URL dan parameter
-    expect(global.fetch).toHaveBeenCalledWith('http://localhost:3000/api/products/1');
+    expect(global.fetch).toHaveBeenCalledWith('http://localhost:3000/api/produk/1');
     expect(result).toEqual({
       props: {
         product: mockApiResponse.data,
