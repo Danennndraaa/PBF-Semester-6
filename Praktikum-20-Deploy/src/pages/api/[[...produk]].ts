@@ -12,6 +12,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
 )  {
+    // ==========================================================
+    // TAMBAHKAN 3 BARIS INI UNTUK DEBUGGING DI VERCEL LOGS
+    // ==========================================================
+    console.log("=== CEK KONEKSI FIREBASE DI VERCEL ===");
+    console.log("PROJECT ID BACAAN VERCEL:", process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID);
+    console.log("API URL BACAAN VERCEL:", process.env.NEXT_PUBLIC_API_URL);
+
     if (req.query.produk![1]) {
       const data = await retrieveDataByID("products", req.query.produk![1]);
       res.status(200).json({status: true, status_code: 200, data: data});
